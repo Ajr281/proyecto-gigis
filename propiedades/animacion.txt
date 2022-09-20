@@ -1,0 +1,123 @@
+animation-name= acá le ponemos el nombre a la animación.
+____________________________________________________________________
+
+@keyframe= con esto podemos controlar el comportamiento de la animación durante todo el recorrido.
+por ej -->
+
+@keyframe *nombre de la animación* 
+
+0% {
+
+background-color: blue;
+transform: 
+
+}
+
+
+50% {
+
+background-color: red;
+}
+
+100% {
+
+background-color: yellow
+}
+
+De esta forma, estoy diciendo que al inicio de la animación el color sea azul, que a la mitad sea rojo, y que al final sea amarillo.
+
+____________________________________________________________________
+
+animation-duration: defino la duración de la animación, por ej, 1s 2s 3.5s etc.
+
+____________________________________________________________________
+
+animation-iteration-count= define cuántas veces va a ser repetida la animación.
+
+Si le pongo 1 (por defecto), se repite una vez.
+Si le pongo 2, se hace dos veces. Si le pongo 3, se repite 3 veces. Y así.
+
+También tiene el valor INFINITE que repite la animación ilimitadamente.
+
+____________________________________________________________________
+
+animation-direction= define desde que punto parte la animación y dónde termina.
+
+PROPIEDADES:
+
+NORMAL, que realiza de 0% a 100% la animación que le indiqué.
+
+REVERSE, que realiza de 100% a 0% la animación que le indiqué.
+
+ALTERNATE, que realiza la animación de 0 a 100, pero después de llegar a 100, vuelve a 0. De esta forma yo tengo una animación que no se corta nunca, recorre de 0 a 100 y de 100 a 0 infinitamente.
+0-100-0 (o las veces que yo le diga)
+
+Por último, tengo la propiedad ALTERNATE-REVERSE, que realiza la animación de 100 a 0 y de 0 a 100. Sería de la siguiente forma: 
+100-0-100.
+
+____________________________________________________________________
+
+animation-fill-mode: esta propiedad se encarga de decir qué va a pasar antes y después de que la animación se ejecute.
+
+PROPIEDADES:
+
+FORWARD= lo que hace es que, quede fijado en la página lo último que realizó la animación.
+Es decir, si yo tengo una animación que recorre de 0-50-100 y después vuelve a 0 (por defecto está así), al usar FORWARD hago que cuando llegue a 100, la posición final de la animación, quede fijada en la página.(LA MÁS PIOLA)
+
+BACKWARDS= nos da los estilos que quiero que tenga el objeto que quiero animar, antes de que comience la animación.
+Esta propiedad funciona en conjunto con animation-dellay.
+
+BOTH= es la fusión entre BACKWARDS y FORWARD. Es decir, va a tener backwards al iniciar, y va a culminar con forward.
+____________________________________________________________________
+
+animation-delay=  define un tiempo de espera para que la animación se ejecute.
+____________________________________________________________________
+
+animation-timing-function= lo que hace es determinar la velocidad de la animación.
+
+PROPIEDADES:
+
+EASE: viene por defecto. Aumenta la velocidad de la animación y la disminuye al final.
+
+EASE-IN= empieza lentamente y aumenta la velocidad hasta que termina.
+
+EASE-OUT= comienza la animación rapidamente y después disminuye al final. (Hacer comparación con EASE, porque conceptualmente dijo lo mismo en EASE y en EASE-OUT)
+
+EASE-IN-OUT= comienza la animación lentamente, acelera durante el recorrido, y después al final disminuye devuelta. (ESTE ES EL MÁS ZARPADO)
+
+____________________________________________________________________
+
+animation-play-state: hace que la animación se mantenga corriendo o se pause.
+
+PROPIEDADES:
+
+RUNNING (por defecto): deja la animación reproduciéndose.
+
+PAUSED: pausa la animación, puede funcionar muy bien con :hover --> de la siguiente manera:
+
+div:hover{
+
+animation-play-state: paused
+}
+
+De esa forma, hago que al pasar el mouse sobre la animación, la pauso.
+
+____________________________________________________________________
+
+animation: con el shortcut animation, puedo poner todas las propiedades EN EL ORDEN QUE QUIERA, solo cumpliendo con lo siguiente:
+
+La primer unidad de tiempo que defina, por ejemplo 2s, va a corresponder a la duración de la animación.
+
+Y la segunda unidad de tiempo que defina, por ejemplo 3s, va a corresponder al dellay.
+
+Entonces si pongo=
+
+animation: objeto-animado 2s 3s infinite alternate;
+
+Sería -->
+
+animation-name: objeto-animado;
+animation-duration: 2s;
+animation-dellay: 3s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
