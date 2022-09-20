@@ -1,0 +1,58 @@
+git config --global user.name= define nombre de usuario
+
+git config --global user.email= define mi mail
+
+git init= inicia "repositorio" para los 3 estados y me ubica sobre la rama "master".
+
+git status= me muestra qué archivos están cargados y cuáles no.
+
+git add= me deja agregar los archivos de dos formas:
+
+1. git add *nombre de archivo*
+ó
+2. git add . (de esta manera agrego todo lo que no está agregado)
+
+git commit= me deja subir todo lo que agregué, y mandar un mensaje. Se aplica así:
+
+git commit -m "acá va el mensaje"
+
+       Si hago un cambio en el html o carpeta del proyecto, y pongo git status, me va a mostrar que hay cambios que no estan agregados (add). Entonces puedo poner gid add *archivo modificado o el . " o puedo poner gid restore *archivo modificado o el .*
+gid restore me sirve para anular el cambio que hice.
+
+git branch = me permite saber en qué rama estoy parado.
+
+git branch + algún nombre= me permite crear una rama nueva.
+
+git checkout + nombre de rama= me permite moverme entre ramas.
+
+--------------------------------------------------------
+
+Me corro de la rama master para realizar cambios en otra rama, pongamosle PEPITO. 
+Entonces me voy a la rama pepito y hago las modificaciones que quiero y quedo satisfecho.
+Entonces después, quiero hacer que los cambios de pepito pasen a ser vigentes y estables en la rama master.
+
+¿como hago?
+
+Así:
+
+1. Estoy en la rama pepito y hago los cambios que quiero.
+
+2. Acá pongo git status --> git add . (para agregar los cambios que hice) --> git commit -m "acá va el mensaje de los cambios que hice"
+
+3. Vuelvo al a rama master con --> git checkout master
+
+4. LOS FUSIONO con --> git merge pepito
+
+5. Ya quedó en la rama master la fusión (merge) con la rama pepito.
+
+--------------------------------------------------------
+
+git log: me permite ver todos los archivos que commitie
+
+--------------------------------------------------------
+
+git push -u origin *nombre de rama*: actualiza la rama en GitHub.
+
+--------------------------------------------------------
+
+  

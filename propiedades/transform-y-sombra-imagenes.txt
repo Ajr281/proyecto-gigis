@@ -1,0 +1,73 @@
+transfom.
+
+DATO: Eje X es horizontal. Eje Y es vertical.
+
+--------------------------------------------------------
+
+transform: translate (ejeX, ejeY)
+
+pongo los pixeles que quiera, y en ese orden (X,Y) los mueve de su posición.
+
+por ej= transform: translate(20px, 20px);
+
+También puedo moverlos en un solo eje con translateX y translateY
+
+--------------------------------------------------------
+
+transform:rotate(?)
+
+En ? pongo la cantidad de DEGREES que quiera, y rota el objeto.
+
+Si pongo números positivos (por ej, 40deg, 80deg, 160deg) gira hacia la derecha en sentido horario.
+
+Si pongo números negativos, gira hacia la izquierda en sentido antihorario (por ej, -40deg, -80deg, -160deg).
+
+También puedo moverlos en un solo eje con rotateX y rotateY.
+
+--------------------------------------------------------
+
+transform: scale()
+
+es básicamente un zoom.
+
+Con los números 1 o más, agranda el objeto.
+
+Con los números entre 0 y 1, achica el objetvo.
+
+Con los números negativos, dá vuelta el objeto y lo agranda dado vuelta. (-1, -2, -3.5, etc)
+
+también existe scaleX para horizontal y scaleY para vertical.
+
+--------------------------------------------------------
+
+transform: skew()
+
+lo que hace es deformar el objeto, es medio raro, como que lo inclina. 
+
+Funciona con DEGREES (como rotate) y también se puede usar skewX y skewY.
+
+--------------------------------------------------------
+
+:hover{}
+
+si en una ruta de especificidad, al final le pongo :hover{} y dicto dentro de las llaves un comportamiento, lo que hace es que cuando el usuario pasa el mouse por esa etiqueta, se ejecuta el comportamiento que yo le dicté.
+
+por ejemplo=
+
+div p:hover{    
+    background-color:blue;
+    transform:scale(10px, 10px);
+}
+
+entonces ahora lo que sucederá es, que cuando el usuario pase el mouse por ese | div -> p | se va a cambiar el color de fondo y se va a hacer zoom al parrafo.
+
+--------------------------------------------------------
+
+filter: drop-shadow ( _px _px _px +  color);
+
+esto lo que hace es darle una sombra adentro de las imágenes. 
+
+A veces uno pone una imágen y tiene un recuadro de fondo, por lo cual si aplicas una sombra u algo, se le aplica al recuadro.
+
+Con esta etiqueta vamos a conseguir darle un sombreado en la parte interna.
+

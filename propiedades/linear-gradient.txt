@@ -1,0 +1,26 @@
+propiedades linear-gradient:
+
+*se usa solo con background-image*
+
+background-image: linear-gradient (to bottom,top, left or right, color, color);
+
+al poner (to bottom, o top, etc) defino hacia que lado va. Los colores que van después, definen en ese orden, como van a ir dependiendo de si pongas, top, left, y eso.
+
+--------------------------------------------------------
+
+despues está: *radial-gradient, se usa solo con background-image*
+
+back-imag: radial-gradient(color, color);
+
+back-imag: radial-gradient(ellipse at *aca va desde donde quiero que empiece, puede ser top, bottom, left y eso*, color, trasnparent) ==
+quedaría ==
+
+back-imag: radial-gradient(ellipse at top, color, transparent)
+--------------------------------------------------------
+back-imag: radial-gradient(circle, color, color, color)
+
+me deja tener varios colores y van formando como un circulo.
+--------------------------------------------------------
+
+
+

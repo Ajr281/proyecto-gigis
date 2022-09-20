@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*estilos generales*/
+body{
+    font-family: 'Noto Serif JP', serif;
+}
+
+/*estilos del header*/
+
+header{
+    background-color: black;
+    overflow: hidden;
+}
+
+header a img{
+    width: 6rem;
+    margin-right: 25rem;
+    /*por tener un margin-right tan largo, al tocar sobre el logo y querer volver al INICIO, se extiende hacia la derecha el click, corregir*/
+}
+
+header .contenedor{
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+    padding:1.3rem;
+    border-left: 1px solid white;
+    font-weight: bold;
+}
+
+header nav ul li:hover{
+    background-color: #141E27;
+}
+
+header div nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.cont{
+    border-right: 1px solid white;
+}
+
+/*estilos del main*/
+
+main{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.77), rgba(255, 255, 255, 0.01)), url("../img/pestana-mujer.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+main .main-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+main .main-container h1{
+    margin-top: 30vh;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3rem;
+}
+
+main .main-container p{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main .main-container div{
+    width: 14rem;
+    display: flex;
+    justify-content: space-between;
+}
+main .main-container div a{
+    text-decoration: none;
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+    border: 1.5px solid black;
+    background-image: linear-gradient(to bottom,rgba(128, 128, 128, 0.9),rgba(128, 128, 128, 0.6));
+    color: white;
+    font-weight: bold;
+}
+
+/*estilos del footer*/
+
+footer{
+    background-color: black;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-container{
+    width: 6rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h2{
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    font-size: small;
+}

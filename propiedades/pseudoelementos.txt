@@ -1,0 +1,12 @@
+:hover{}
+
+si en una ruta de especificidad, al final le pongo :hover{} y dicto dentro de las llaves un comportamiento, lo que hace es que cuando el usuario pasa el mouse por esa etiqueta, se ejecuta el comportamiento que yo le dicté.
+
+por ejemplo=
+
+div p:hover{    
+    background-color:blue;
+    transform:scale(10px, 10px);
+}
+
+entonces ahora lo que sucederá es, que cuando el usuario pase el mouse por ese | div -> p | se va a cambiar el color de fondo y se va a hacer zoom al parrafo.
